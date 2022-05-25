@@ -7,7 +7,8 @@ function validar() {
     var result_val_ciudad = validar_ciudad();
     var result_val_postal = validar_postal();
     var result_val_celular = validar_celular();
-    return (result_val_email && result_val_password && result_val_password2 && result_val_direccion && result_val_comuna && result_val_ciudad && result_val_postal && result_val_celular);
+    var result_val_aficion = validar_aficion();
+    return (result_val_email && result_val_aficion && result_val_password && result_val_password2 && result_val_direccion && result_val_comuna && result_val_ciudad && result_val_postal && result_val_celular);
 }
 
 function validar_fto_email(email) {
@@ -154,8 +155,8 @@ function validar_postal() {
 function validar_celular() {
     var celular = document.getElementById("celular").value;
     var div = document.getElementById("msj-celular");
-    if  (celular.length == 9) {
-        if (celular>=0 && celular<=999999999) {
+    if  (celular.length == 11) {
+        if (celular>=0 && celular<=99999999999) {
             div.innerHTML = "";
             return true;
         } else {
@@ -164,9 +165,68 @@ function validar_celular() {
             return false;  
         }
     } else {
-        div.innerHTML = "El Celular son 9 dígitos";
+        div.innerHTML = "El Celular son 11 dígitos";
         div.className = "text-danger";
         return false;
     }
 }
 
+function validar_aficion() {
+    var c1 = document.getElementById("check1");
+    var c2 = document.getElementById("check2");
+    var c3 = document.getElementById("check3");
+    var c4 = document.getElementById("check4");
+    var c5 = document.getElementById("check5");
+    var c6 = document.getElementById("check6");
+    var div = document.getElementById("msj-afi");
+    if (c1.checked == true && c2.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c1.checked == true && c3.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c1.checked == true && c4.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c1.checked == true && c5.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c1.checked == true && c6.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c2.checked == true && c3.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c2.checked == true && c4.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c2.checked == true && c5.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c2.checked == true && c6.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c3.checked == true && c4.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c3.checked == true && c5.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c3.checked == true && c6.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c4.checked == true && c5.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c4.checked == true && c6.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }if (c5.checked == true && c6.checked == true) {
+        div.innerHTML = "";
+        return true;
+    }else{
+        div.innerHTML = "Seleccione minimo dos Aficiones";
+        div.className = "text-danger";
+        return false;
+    }
+}
