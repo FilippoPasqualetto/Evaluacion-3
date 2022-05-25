@@ -155,8 +155,8 @@ function validar_postal() {
 function validar_celular() {
     var celular = document.getElementById("celular").value;
     var div = document.getElementById("msj-celular");
-    if  (celular.length == 11) {
-        if (celular>=0 && celular<=99999999999) {
+    if  (celular.length == 9) {
+        if (celular>=0 && celular<=999999999) {
             div.innerHTML = "";
             return true;
         } else {
@@ -165,7 +165,7 @@ function validar_celular() {
             return false;  
         }
     } else {
-        div.innerHTML = "El Celular son 11 dígitos";
+        div.innerHTML = "El Celular son 9 dígitos";
         div.className = "text-danger";
         return false;
     }
