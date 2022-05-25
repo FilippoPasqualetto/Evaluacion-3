@@ -32,12 +32,12 @@ function validar_email() {
             div.innerHTML = "";
             return true;
         } else {
-            div.innerHTML = "El formato del email no es valido";
+            div.innerHTML = "El formato del Email no es valido";
             div.className = "text-danger";
             return false;
         }
     } else {
-        div.innerHTML = "El email no puede estar en blanco";
+        div.innerHTML = "El Email no puede estar en blanco";
         div.className = "text-danger";
         return false;
     }
@@ -66,7 +66,7 @@ function validar_password() {
             div.innerHTML = "";
             return true;
         } else {
-            div.innerHTML = "La Contraceña debe tener minimo un dígito y una letra";
+            div.innerHTML = "La Contraseña debe tener minimo un dígito y una letra";
             div.className = "text-danger";
             return false;  
         }
@@ -81,7 +81,7 @@ function validar_password2() {
     var password2 = document.getElementById("password2").value;
     var div = document.getElementById("msj-password2");
     if (password2 == "") {
-        div.innerHTML = "Repita la Contraceña";
+        div.innerHTML = "Repita la Contraseña";
         div.className = "text-danger";
         return false; 
         } if  (password == password2) {
