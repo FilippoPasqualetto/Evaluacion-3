@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Formulario de Registro</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body class="r">
+        <header>
+            <h1 class="r">FORMULARIO DE REGISTRO</h1>
+        </header>
+        <nav><br></nav>
+        <main>
+            <form onsubmit="return validar()">
+                <h3>Datos Basicos</h3>
+                <div class="r row g-3">
+                    <h5>Datos Login:</h5>
+                    <div class="col-md-12">
+                        <label><strong>Email</strong></label>
+                        <input id="email" class="r" placeholder="...">
+                        <div id="msj-email"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label><strong>Contraseña</strong></label>
+                        <input id="password" type="password" class="r" placeholder="...">
+                        <div id="msj-password"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label><strong>Confirme la Contraseña</strong></label>
+                        <input id="password2" type="password" class="r" placeholder="...">
+                        <div id="msj-password2"></div>
+                    </div>
+                </div>
+                <h3>Datos Personales</h3>
+                <div class="r row g-3">
+                    <h5>Dirección Postal:</h5>
+                    <div class="col-md-6">
+                        <label><strong>Dirección</strong></label>
+                        <input id="direccion" type="text" class="r" placeholder="...">
+                        <div id="msj-direccion"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label><strong>Referencia</strong> (Opcional)</label>
+                        <input id="referencia" type="text" class="r" placeholder="...">
+                    </div>
+                    <div class="col-md-4">
+                        <label><strong>Comuna</strong></label>
+                        <select id="comuna" class="form-control r" >
+                            <option selected>Seleccione una comuna ...</option>
+                            <option>Valdivia</option>
+                            <option>Corral</option>
+                            <option>Lanco</option>
+                            <option>Los Lagos</option>
+                            <option>Máfil</option>
+                        </select>
+                        <div id="msj-comuna"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label><strong>Ciudad</strong></label>
+                        <input id="ciudad" type="text" class="r" placeholder="...">
+                        <div id="msj-ciudad"></div>
+                    </div>
+                    <div class="col-md-4">
+                        <label><strong>Codigo Postal</strong></label>
+                        <input id="postal" type="text" class="r" placeholder="...">
+                        <div id="msj-postal"></div>
+                    </div>
+                    <hr>
+                    <h5>Numero/s de contacto:</h5>
+                    <div class="col-md-6">
+                        <label><strong>Celular</strong></label>
+                        <input id="celular" type="text" class="r" placeholder="...">
+                        <div id="msj-celular"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <label><strong>Telefono Fijo</strong> (Opcional)</label>
+                        <input id="fijo" type="text" class="r" placeholder="...">
+                    </div>
+                    <hr>
+                    <h5>Aficiones:</h5>
+                    <div id="msj-aficiones"></div>
+                    <div class="form-check col-md-3">
+                        <input class="form-check-input pl" type="checkbox" id="check1">
+                        <label class="form-check-label" for="check">
+                            Futbol
+                        </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                        <input class="form-check-input pl" type="checkbox" id="check2">
+                        <label class="form-check-label" for="check">
+                            Basquetbol
+                        </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                        <input class="form-check-input pl" type="checkbox" id="check3">
+                        <label class="form-check-label" for="check">
+                            Pescar
+                        </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                        <input class="form-check-input pl" type="checkbox" id="check4">
+                        <label class="form-check-label" for="check">
+                            Pintar
+                        </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                        <input class="form-check-input pl" type="checkbox" id="check5">
+                        <label class="form-check-label" for="check">
+                            Musica
+                        </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                        <input class="form-check-input pl" type="checkbox" id="check6">
+                        <label class="form-check-label" for="check">
+                            Leer
+                        </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                        <input class="form-check-input pl" type="checkbox" id="check7">
+                        <label class="form-check-label" for="check">
+                            Cocinar
+                        </label>
+                    </div>
+                    <div class="form-check col-md-3">
+                        <input class="form-check-input pl" type="checkbox" id="check8">
+                        <label class="form-check-label" for="check">
+                            Video Juegos
+                        </label>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <input class="r" type="submit" value="Terminar">
+                    </div>
+                </div>
+            </form>
+
+        </main>
+        <script src="validacion.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    </body>
+    <footer>
+        <br>
+        <p>Filippo Luca Pasqualetto Sanguinetti</p>
+        <p>Inacap 2022 &nbsp; &nbsp; &nbsp; &nbsp; Email: filippo.pasqualetto@inacapmail.cl</p>
+    </footer>
+</html>
